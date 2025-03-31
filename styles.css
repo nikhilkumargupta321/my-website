@@ -112,3 +112,21 @@ nav ul li a:hover {
         margin-top: 20px;
     }
 }
+#contact {
+    background: #f4f4f4;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact h2 {
+    color: #0077cc;
+}
+
+iframe {
+    border-radius: 10px;
+    border: none;
+}
