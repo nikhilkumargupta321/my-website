@@ -6,12 +6,7 @@
     <title>My Personal Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-    }
-</script>
-    <body>
+<body>
     <header>
         <h1>Welcome to My Personal Website</h1>
         <nav>
@@ -27,9 +22,9 @@
     <section id="about" style="display: flex; align-items: center;">
         <div style="flex: 1;">
             <h2>About Me</h2>
-        <p>Hello! I'm Nikhil Kumar, and this is my personal website where I share my thoughts and showcase my work.</p>
- </div>
-    <img src="0280581001738149926M440411.jpg" alt="My Profile Picture" width="150" style="border-radius: 50%; margin-left: 20px;">  
+            <p>Hello! I'm Nikhil Kumar, and this is my personal website where I share my thoughts and showcase my work.</p>
+        </div>
+        <img src="profile-pic.jpg" alt="My Profile Picture" width="150" style="border-radius: 50%; margin-left: 20px;">  
     </section>
 
     <section id="blog">
@@ -43,14 +38,21 @@
     </section>
 
     <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Have any questions? Fill out the form below!</p>
-    
-   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbNeE_7vpHFJ02P8Wre9T0BylQ0EJluiH72EllWe3RDGZNPw/viewform?embedded=true" width="440" height="382" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</section>
-<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <h2>Contact Me</h2>
+        <p>Have any questions? Fill out the form below!</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfbNeE_7vpHFJ02P8Wre9T0BylQ0EJluiH72EllWe3RDGZNPw/viewform?embedded=true" width="440" height="382" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </section>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
     <footer>
-        <p>&copy; 2025 Nikhil Kumar. All Rights Reserved.</p>
+        <p>© 2025 Nikhil Kumar. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
