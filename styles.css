@@ -19,10 +19,7 @@ body {
     color: #fff;
 }
 
-.dark-mode #about,
-.dark-mode #blog,
-.dark-mode #resume,
-.dark-mode #contact {
+.dark-mode .section.active {
     background-color: #333;
     color: #fff;
 }
@@ -87,17 +84,26 @@ nav ul li a:hover {
     background: linear-gradient(145deg, #0077cc, #005599);
 }
 
-/* About Me Section */
-#about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Sections */
+.section {
+    display: none; /* Hide all sections by default */
     max-width: 800px;
     margin: 50px auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section.active {
+    display: block; /* Show only the active section */
+}
+
+/* About Me Section */
+#about.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #about div {
@@ -112,11 +118,12 @@ nav ul li a:hover {
     margin-left: 20px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 /* Typing Animation */
 .typing-text span {
     display: inline-block;
     opacity: 0;
-    white-space: pre; /* Preserve spaces between words */
+    white-space: pre;
 }
 
 @keyframes type {
@@ -129,30 +136,13 @@ nav ul li a:hover {
         transform: translateY(0);
     }
 }
-/* Blog Section */
-#blog {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
 
+/* Blog Section */
 #blog h2 {
     color: #0077cc;
 }
 
 /* Resume Section */
-#resume {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 #resume h2 {
     color: #0077cc;
 }
@@ -167,17 +157,6 @@ nav ul li a:hover {
 }
 
 /* Contact Section */
-#contact {
-    background: #f4f4f4;
-    padding: 30px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 #contact h2 {
     color: #0077cc;
 }
@@ -202,7 +181,7 @@ footer {
         flex-direction: column;
     }
     
-    #about {
+    #about.active {
         flex-direction: column;
         text-align: center;
     }
@@ -212,7 +191,7 @@ footer {
         margin-top: 20px;
     }
 
-    #contact {
-        width: 90%;
+    .section.active {
+        margin: 20px;
     }
 }
