@@ -165,7 +165,11 @@ iframe {
     border-radius: 10px;
     border: none;
 }
-
+#clock {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff9800;
+}
 /* Footer */
 footer {
     margin-top: 20px;
