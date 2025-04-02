@@ -97,7 +97,13 @@ Harishchandragad, one of the most.... Click the title to read more!
         function toggleDarkMode() {
         const body = document.body;
         const button = document.querySelector("button");
+function updateClock() {
+        const now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleTimeString();
+    }
 
+    setInterval(updateClock, 1000);
+    updateClock();
         // Toggle dark mode class
         body.classList.toggle("dark-mode");
 
